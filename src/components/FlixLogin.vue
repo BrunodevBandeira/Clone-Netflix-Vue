@@ -38,9 +38,9 @@
                         <br>
                         <a href="#">Preferências de cookies</a>
 
-                        <select action="">
-                            <option selected> Português </option>
-                            <option > Inglês </option>
+                        <select class="footer-idioma">
+                            <option class="footer-texto" selected> Português </option>
+                            <option class="footer-texto" > Inglês </option>
                         </select>
                     </div>
 
@@ -221,7 +221,7 @@ export default {
         height: 19.8rem;
         background-color: rgba(0,0,0,.75);
         position: absolute;
-        bottom: -31rem;
+        bottom: -29rem;
     }
 
     footer div a{
@@ -233,6 +233,15 @@ export default {
         padding: 2.5rem;
         display: flex;
         justify-content: space-evenly;
+    }
+
+    .footer-idioma  {
+        width: 45%;
+        height: 25%;
+        padding: 10px 15px;
+        border: 1px solid #333;
+        border-radius: 4px;
+        background-color: #000;
     }
 
     .footer-links-c1 {
