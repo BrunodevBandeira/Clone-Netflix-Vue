@@ -13,9 +13,12 @@
         <img class="telaDeFundo" src="../assets/Netflix.jpg" alt="Tela de fundo">
 
         <nav class="main-input">
+            <h1 class="title">Filmes, séries e muito  <br>mais. Sem limites.</h1>
+            <h3 class="sub-title">Assista onde quiser. Cancele quando quiser.</h3>
+            <p class="p-title">Pronto para assistir? Informe seu email para criar ou reiniciar sua assinatura.</p>
             <form>
-                <input type="email" value="Email"> <button class="btn" >Vamos lá <i class="fa fa-angle-right"></i>
-</button>
+                <input type="email" value="Email"> 
+                <button class="btn" >Vamos lá <i class="fa fa-angle-right"></i></button>
             </form>
         </nav>
     </div>
@@ -43,8 +46,8 @@ export default {
     }
 
     header .logo {
-        width: 10rem;
-        height: 5rem;
+        width: 15rem;
+        height: 8rem;
         margin: 0.2rem 0 0 3rem;
         position: absolute;
         z-index: 5;
@@ -52,9 +55,39 @@ export default {
 
     .telaDeFundo {
         width: 100vw;
-        height: 110vh;
+        height: 100vh;
         position: relative;
+        filter: brightness(0.4);
     }
+
+    .main-input {
+    margin: -8rem 0;
+    }
+
+    .main-input .title {
+        color: #fff;
+        text-align: center;
+        font-size: 4.125rem;
+        font-weight: bolder;
+    }
+
+    .main-input .sub-title {
+        color: #fff;
+        text-align: center;
+        font-size: 2.125rem;
+        padding: 1.5rem;
+        font-weight: bolder;
+    }
+
+
+    .main-input .p-title {
+        color: #fff;
+        text-align: center;
+        padding: 1rem;
+        font-weight: bolder;
+
+    }
+
 
     .main-input {
         position: absolute;
