@@ -16,7 +16,7 @@
             <h1 class="title">Filmes, séries e muito  <br>mais. Sem limites.</h1>
             <h3 class="sub-title">Assista onde quiser. Cancele quando quiser.</h3>
             <p class="p-title">Pronto para assistir? Informe seu email para criar ou reiniciar sua assinatura.</p>
-            <form>
+            <form class="form__submit">
                 <input type="email" value="Email"> 
                 <button class="btn" >Vamos lá <i class="fa fa-angle-right"></i></button>
             </form>
@@ -25,9 +25,14 @@
 </template>
 
 <script>
-export default {
-    
-}
+    function handler() {
+
+    }
+
+    window.onload =() => {
+        const submit = document.querySelector(".form__submit")
+        submit.addEventListener("click", handler);
+    }
 </script>
 
 <style scoped>

@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <FlixChooseUser />
+    <FlixLoginBusca />
   </div>
 </template>
 
@@ -8,8 +8,8 @@
 export default {
   name: 'app',
   components: {
-    FlixChooseUser: () => import("./components/FlixChooseUser.vue"),
-    // FlixLoginBusca: () => import("./components/FlixLoginBusca.vue"),
+    // FlixChooseUser: () => import("./components/FlixChooseUser.vue"),
+    FlixLoginBusca: () => import("./components/FlixLoginBusca.vue"),
     // FlixLogin: () => import('./components/FlixLogin.vue')
   }
 }
