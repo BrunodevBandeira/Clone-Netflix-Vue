@@ -1,13 +1,8 @@
 <template>
     <div id="flb">
         <header>
-            <!-- <select class="footer-idioma">
-                <option class="footer-texto" selected> Português </option>
-                <option class="footer-texto" > Inglês </option>
-            </select> -->
-
-                <img class="logo" src="../sprite/netflix-logo.svg" alt="Logo da Netflix">
-                <button class="header-btn"> Entrar </button>
+            <img class="logo" src="../sprite/netflix-logo.svg" alt="Logo da Netflix">
+            <button class="header-btn"> Entrar </button>
         </header>
 
         <img class="telaDeFundo" src="../assets/Netflix.jpg" alt="Tela de fundo">
@@ -17,7 +12,7 @@
             <h3 class="sub-title">Assista onde quiser. Cancele quando quiser.</h3>
             <p class="p-title">Pronto para assistir? Informe seu email para criar ou reiniciar sua assinatura.</p>
             <form class="form__submit">
-                <input type="email" value="Email"> 
+                <input  class="form__input" type="email" value="Email"> 
                 <button class="btn" >Vamos lá <i class="fa fa-angle-right"></i></button>
             </form>
         </nav>
@@ -25,14 +20,7 @@
 </template>
 
 <script>
-    function handler() {
 
-    }
-
-    window.onload =() => {
-        const submit = document.querySelector(".form__submit")
-        submit.addEventListener("click", handler);
-    }
 </script>
 
 <style scoped>
