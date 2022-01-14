@@ -30,7 +30,7 @@
         e.preventDefault();
         let movie = document.querySelector(".form__input").value;
         if(movie) {
-            const _url = `http://www.omdbapi.com/?s=${movie}&apKey=ead5319b`;
+            const _url = `https://www.omdbapi.com/?s=${movie}&apikey=ead5319b`;
             const _options = {
                 method: "GET",
                 mode: "cors",
@@ -40,12 +40,34 @@
 
             fetch(_url, _options).then(function(response) {
                 //Tratamento de erro
-                if(!response.ok) throw new Error("Erro ao executar a requisição"){
-                    //Retorno do Objeto no formado JSON
-                }
+                if(!response.ok) throw new Error("Erro ao executar a requisição");
+                
+                //Retorno do Objeto no formado JSON
+                return response.json();
+                
             })
-        } else {
-            
+
+            //Receber dados
+
+            .then(function(data){
+                let newContent = "";
+                for(let index = 1; index < data.Search.lengtn; index++) {
+                    newContent += `<li class="app-movies-all__card">`;
+
+                            newContent += `<figure class="app-movies-all__figure">`; 
+                                newContent += `<img class="app-movies-all__thumb" src="${data.Search[index].Poster}">`;
+                            newContent += `</figure>`;
+
+                        newContent += `<legend class="app-movies-all__legend">`;
+                            newContent += `<span class="app-movies-all__year">${data.Search[index].Year}</span>`;
+                            newContent += `<h2 class="app-movies-all__title">${data.Search[index].Title}</h2>`; 
+                        newContent += `</legend>`;
+                    newContent += `</li>`;
+                }
+
+                document.getElementById("movies").innerHTML = newContent;
+
+            })
         }
     }
 
