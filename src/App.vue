@@ -3,7 +3,8 @@
     <!-- <FlixChooseUser /> -->
     <!-- <FlixLoginBusca /> -->
     <!-- <FlixLogin /> -->
-    <FlixScreenMain />
+    <!-- <FlixScreenMain /> -->
+    <FlixRegisterClient />
 
 
   </div>
@@ -16,7 +17,8 @@ export default {
     // FlixChooseUser: () => import("./components/FlixChooseUser.vue"),
     // FlixLoginBusca: () => import("./components/FlixLoginBusca.vue"),
     // FlixLogin: () => import('./components/FlixLogin.vue'),
-    FlixScreenMain: () => import("./components/FlixScreenMain.vue"),
+    // FlixScreenMain: () => import("./components/FlixScreenMain.vue"),
+    FlixRegisterClient: () => import("./components/FlixRegisterClient.vue"),
   }
 }
 </script>
