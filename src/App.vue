@@ -1,10 +1,10 @@
 <template>
   <div id="app">
     <!-- <FlixChooseUser /> -->
-    <!-- <FlixLoginBusca /> -->
+    <FlixLoginBusca />
     <!-- <FlixLogin /> -->
     <!-- <FlixScreenMain /> -->
-    <FlixRegisterClient />
+    <!-- <FlixRegisterClient /> -->
 
 
   </div>
@@ -15,10 +15,10 @@ export default {
   name: 'app',
   components: {
     // FlixChooseUser: () => import("./components/FlixChooseUser.vue"),
-    // FlixLoginBusca: () => import("./components/FlixLoginBusca.vue"),
+    FlixLoginBusca: () => import("./components/FlixLoginBusca.vue"),
     // FlixLogin: () => import('./components/FlixLogin.vue'),
     // FlixScreenMain: () => import("./components/FlixScreenMain.vue"),
-    FlixRegisterClient: () => import("./components/FlixRegisterClient.vue"),
+    // FlixRegisterClient: () => import("./components/FlixRegisterClient.vue"),
   }
 }
 </script>

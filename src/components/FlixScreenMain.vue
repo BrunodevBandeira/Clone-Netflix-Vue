@@ -3,7 +3,7 @@
         <main>
             <header class="header-movies">
                 <div class="container">
-                    <h1 class="header-movies__title">Areaflix</h1>
+                    <img class="container-logo" src="../sprite/netflix-logo.svg" alt="Logo Netflix">
                 </div>
             </header>
             <section class="section-movies">
@@ -21,6 +21,12 @@
                 </div>
             </section>
         </main>
+
+        <section class="info-container"></section>
+        <!-- <section class="info-container"></section>
+        <section class="info-container"></section>
+        <section class="info-container"></section>
+        <section class="info-container"></section> -->
     </div>
 </template>
 
@@ -84,7 +90,6 @@ main {
     background-repeat:no-repeat;
     background-size:cover;
     background-position:center;
-    position:absolute;
     width:100%;
     height:100%;
 }
@@ -94,7 +99,6 @@ main:after{
     content:'';
     height:100%;
     left:0;
-    position:absolute;
     top:0;
     width:100%;
 }
@@ -128,6 +132,12 @@ main:after{
     padding-right:15px;
     width:100%;
 }
+
+.container-logo {
+    width: 12rem;
+    padding-top: 1rem;
+}
+
 .app-movies {
     align-items:center;
     display:flex;
@@ -280,5 +290,12 @@ main:after{
     .app-movies-all__figure {
         height: 190px;
     }
+}
+
+
+section .info-container {
+    width: 100%;
+    height: 15rem;
+    background: #000;
 }
 </style>

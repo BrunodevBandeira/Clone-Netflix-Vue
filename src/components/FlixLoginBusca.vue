@@ -16,6 +16,18 @@
                 <button class="btn" >Vamos lá <i class="fa fa-angle-right"></i></button>
             </form>
         </nav>
+
+        <section class="info-container">
+            <i class="fa fa-television"></i>
+        </section>
+        <section class="info-container"></section>
+        <section class="info-container"></section>
+        <section class="info-container"></section>
+        <section class="info-container"></section>
+
+        <footer>
+            saspm
+        </footer>
     </div>
 </template>
 
@@ -24,6 +36,12 @@
 </script>
 
 <style scoped>
+
+    #flb {
+        width: 100%;
+        height: 300vh;
+        background: #222;
+    }
 
     .header-btn {
         background-color: #e50914;
@@ -54,7 +72,7 @@
     }
 
     .main-input {
-    margin: -8rem 0;
+        margin: -8rem 0;
     }
 
     .main-input .title {
@@ -111,4 +129,30 @@
         font-size: 1.6rem;
         cursor: pointer;
     }
+
+
+    .info-container {
+        width: 100%;
+        height: 15rem;
+        background: #000;
+        margin: 0.5rem 0; 
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+    }
+
+
+
+
+
+    footer {
+        width: 100%;
+        height: 15rem;
+        background: #000;
+        margin-top: 0.5rem; 
+        color: #fff;
+    }
+
+
 </style>
