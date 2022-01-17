@@ -17,13 +17,37 @@
             </form>
         </nav>
 
-        <section class="info-container">
-            <i class="fa fa-television"></i>
+        <section class="container">
+
+            <div class="info-container">
+                <h1 class="title-container">Aproveite na TV.</h1>
+                <p class="p-container">Assista em Smart TVs, PlayStation, Xbox, Chromecast, Apple TV, aparelhos de Blu-ray e outros dispositivos.</p>
+            </div>
+
+            <div class="icon-container">
+                <div class="icon-content"></div>
+                <i class="fa fa-laptop"></i>
+
+            </div>
+
         </section>
-        <section class="info-container"></section>
-        <section class="info-container"></section>
-        <section class="info-container"></section>
-        <section class="info-container"></section>
+
+        <section class="container"></section>
+
+        <section class="container">
+                        <div class="info-container">
+                <h1 class="title-container">Assista quando quiser.</h1>
+                <p class="p-container">Assista no celular, tablet, Smart TV ou notebook sem pagar a mais por isso..</p>
+            </div>
+
+            <div class="icon-container">
+                <div class="icon-content"></div>
+                <i class="fa fa-desktop"></i>
+
+            </div>
+        </section>
+        <section class="container"></section>
+        <section class="container"></section>
 
         <footer>
             saspm
@@ -39,7 +63,7 @@
 
     #flb {
         width: 100%;
-        height: 300vh;
+        height: 430vh;
         background: #222;
     }
 
@@ -96,7 +120,7 @@
         text-align: center;
         padding: 1rem;
         font-weight: bolder;
-
+        
     }
 
 
@@ -131,9 +155,9 @@
     }
 
 
-    .info-container {
+    .container {
         width: 100%;
-        height: 15rem;
+        height: 29.2rem;
         background: #000;
         margin: 0.5rem 0; 
         color: #fff;
@@ -142,9 +166,43 @@
         align-content: center;
     }
 
+    .info-container {
+        width: 50%;
+    }
 
+    .title-container {
+        text-align: center;
+        font-size: 3.125rem;
+        line-height: 1.1;
+        margin-bottom: 0.5rem;
+        position: relative;
+        top: 28.5%;
+    }
 
+    .p-container {
+        font-size: 1.625rem;
+        font-weight: 400;
+        padding: 0 2rem 0 15rem;
+        position: relative;
+        top: 28.5%;
+    }
 
+    .icon-container {
+        width: 50%;
+    }
+
+    .icon-container .fa {
+        font-size: 25rem;
+        position: relative;
+        left: 8%;
+        top: -5%;
+    }
+
+    .icon-content {
+        background: #e509ae;
+        width: 5rem;
+        height: 5rem;
+    }
 
     footer {
         width: 100%;
