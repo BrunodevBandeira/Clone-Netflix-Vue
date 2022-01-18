@@ -32,7 +32,7 @@
 
         </section>
 
-        <section class="container"></section>
+                    <section class="container"></section>
 
         <section class="container">
                         <div class="info-container">
@@ -46,8 +46,14 @@
 
             </div>
         </section>
-        <section class="container"></section>
-        <section class="container"></section>
+
+                    <section class="container"></section>
+
+
+        <section class="containeres">
+                <h1 class="container-title"> Perguntas Frequentes </h1>
+                <div class="mini-container"></div>
+        </section>
 
         <footer>
             saspm
@@ -63,7 +69,7 @@
 
     #flb {
         width: 100%;
-        height: 430vh;
+        height: 474vh;
         background: #222;
     }
 
@@ -202,6 +208,30 @@
         background: #e509ae;
         width: 5rem;
         height: 5rem;
+    }
+
+    .containeres {
+        width: 100%;
+        height: 52rem;
+        background: #000;
+        margin: 0.5rem 0; 
+        color: #fff;
+    }
+
+    .container-title {
+        font-size: 3.125rem;
+        padding: 5rem 0 2rem 0;
+        text-align: center;
+        background: rebeccapurple;
+    }
+
+    .mini-container {
+        background: #303030;
+        width: 42rem;
+        height: 4rem;
+        position: relative;
+        left: 31.5rem;
+
     }
 
     footer {
