@@ -52,7 +52,15 @@
 
         <section class="containeres">
                 <h1 class="container-title"> Perguntas Frequentes </h1>
-                <div class="mini-container"></div>
+                <div class="mini-container"> 
+                    <p>O que é a Netflix ?</p><i class="fa fa-plus fa-2x"></i>
+                </div>
+                <div class="sub-container">
+                    <p>A Netflix é um serviço de transmissão online que oferece uma ampla variedade de séries, filmes e documentários premiados em milhares de aparelhos conectados à internet.
+                    <br><br>
+                    Você pode assistir a quantos filmes e séries quiser, quando e onde quiser, sem comerciais – tudo por um preço mensal bem acessível. Aqui você sempre encontra novidades. A cada semana, adicionamos novas séries e filmes.</p>
+                </div>
+                <!-- <i class="fa fa-times" aria-hidden="true"></i> -->
         </section>
 
         <footer>
@@ -62,6 +70,11 @@
 </template>
 
 <script>
+let miniContainer = document.querySelector(".mini-container");
+
+miniContainer.addEventListener("click", ()=> {
+        document.querySelector(".sub-container").classList.toggle("mostrar")
+});
 
 </script>
 
@@ -220,19 +233,49 @@
 
     .container-title {
         font-size: 3.125rem;
-        padding: 5rem 0 2rem 0;
+        padding: 4.5rem 0 2rem 0;
         text-align: center;
-        background: rebeccapurple;
     }
 
     .mini-container {
         background: #303030;
-        width: 42rem;
-        height: 4rem;
+        width: 48rem;
+        height: 4.2rem;
         position: relative;
-        left: 31.5rem;
-
+        left: 28rem;
+        display: flex;
+        justify-content: center;
+        justify-content: space-between;
     }
+
+    .mini-container p {
+        padding: 1.4rem 0 0 1.2rem;
+        font-size: 1.5rem;
+        font-weight: bolder;
+    }
+
+    .mini-container .fa-plus {
+        padding: 1.4rem 1.2rem 0 0;
+    }
+
+    .sub-container {
+        background: #303030;
+        width: 48rem;
+        height: 18rem;
+        position: relative;
+        left: 28rem;
+        display: flex;
+        margin-top: 0.1rem;
+        font-size: 1.625rem;
+        font-weight: 400;
+        padding: 1.2rem;
+        display: none;
+    }
+
+    .sub-container.mostrar {
+        display: block;
+    }
+
 
     footer {
         width: 100%;
