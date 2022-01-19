@@ -11,10 +11,17 @@
             <h1 class="title">Filmes, séries e muito  <br>mais. Sem limites.</h1>
             <h3 class="sub-title">Assista onde quiser. Cancele quando quiser.</h3>
             <p class="p-title">Pronto para assistir? Informe seu email para criar ou reiniciar sua assinatura.</p>
-            <form class="form__submit">
+            <!-- <form class="form__submit">
                 <input  class="form__input" type="email" value="Email"> 
-                <button class="btn" >Vamos lá <i class="fa fa-angle-right"></i></button>
+                <button class="btn form__submit" >Vamos lá <i class="fa fa-angle-right"></i></button>
+                <input type="submit" class="form__submit" value="Vamos lá">
+            </form> -->
+
+            <form class="form" method="GET">
+                <input type="text" placeholder="Buscar filme" name="movie" class="form__input" >
+                <input type="submit" class="form__submit" value="Vamos lá">
             </form>
+        
         </nav>
 
         <section class="container">
@@ -70,13 +77,58 @@
 </template>
 
 <script>
-let miniContainer = document.querySelector(".mini-container");
+    function handler(e) {
+    //Esse evento, não mostra a URL passada no rash
+        e.preventDefault();
+        let movie = document.querySelector(".form__input").value;
+        if(movie) {
+            const _url = `https://www.omdbapi.com/?s=${movie}&apikey=ead5319b`;
+            const _options = {
+                method: "GET",
+                mode: "cors",
+                redirect: "follow",
+                cache: "default"
+            }
 
-miniContainer.addEventListener("click", ()=> {
-        document.querySelector(".sub-container").classList.toggle("mostrar")
-});
+            fetch(_url, _options).then(function(response) {
+                //Tratamento de erro
+                if(!response.ok) throw new Error("Erro ao executar a requisição");
+                
+                //Retorno do Objeto no formado JSON
+                return response.json();
+                
+            })
 
+            //Receber dados
+
+            .then(function(data){
+                let newContent = "";
+                for(let index = 1; index < data.Search.lengtn; index++) {
+                    newContent += `<li class="app-movies-all__card">`;
+
+                            newContent += `<figure class="app-movies-all__figure">`; 
+                                newContent += `<img class="app-movies-all__thumb" src="${data.Search[index].Poster}">`;
+                            newContent += `</figure>`;
+
+                        newContent += `<legend class="app-movies-all__legend">`;
+                            newContent += `<span class="app-movies-all__year">${data.Search[index].Year}</span>`;
+                            newContent += `<h2 class="app-movies-all__title">${data.Search[index].Title}</h2>`; 
+                        newContent += `</legend>`;
+                    newContent += `</li>`;
+                }
+
+                document.getElementById("movies").innerHTML = newContent;
+
+            })
+        }
+    }
+
+    window.onload =() => {
+        const submit = document.querySelector(".form__submit")
+        submit.addEventListener("click", handler);
+    }
 </script>
+
 
 <style scoped>
 
@@ -163,7 +215,7 @@ miniContainer.addEventListener("click", ()=> {
         padding: 10px;
     }
 
-    .btn {
+    .form__submit  {
         width: 12rem;
         height: 4.7rem;
         border: none;
@@ -171,6 +223,10 @@ miniContainer.addEventListener("click", ()=> {
         color: #fff;
         font-size: 1.6rem;
         cursor: pointer;
+    }
+
+    .form__submit:hover {
+            background-color:#c70913;
     }
 
 
