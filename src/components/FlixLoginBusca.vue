@@ -19,7 +19,7 @@
 
             <form class="form" method="GET">
                 <input type="text" placeholder="Buscar filme" name="movie" class="form__input" >
-                <input type="submit" class="form__submit" value="Vamos lá">
+                <input type="submit" class="form__submit fa fa-angle-right" value="Vamos lá">
             </form>
         
         </nav>
@@ -34,12 +34,21 @@
             <div class="icon-container">
                 <div class="icon-content"></div>
                 <i class="fa fa-laptop"></i>
-
             </div>
 
         </section>
 
-                    <section class="container"></section>
+                    <section class="container">
+                        <div class="icon-container-left">
+                            <div class="icon-content"></div>
+                            <i class="fa fa-laptop"></i>
+                        </div>
+
+                        <div class="info-container-left">
+                            <h1 class="title-container">Baixe séries para assistir offline.</h1>
+                            <p class="p-container">Salve seus títulos favoritos e sempre tenha algo para assistir.</p>
+                        </div>
+                    </section>
 
         <section class="container">
                         <div class="info-container">
@@ -54,7 +63,17 @@
             </div>
         </section>
 
-                    <section class="container"></section>
+                    <section class="container">
+                        <div class="icon-container-left">
+                            <div class="icon-content"></div>
+                            <i class="fa fa-laptop"></i>
+                        </div>
+
+                        <div class="info-container-left">
+                            <h1 class="title-container">Crie perfis para crianças.</h1>
+                            <p class="p-container">Deixe as crianças se aventurarem com seus personagens favoritos em um espaço feito só para elas, sem pagar a mais por isso.</p>
+                        </div>
+                    </section>
 
 
         <section class="containeres">
@@ -119,17 +138,17 @@
                 </div>
             </div>
 
-        <nav class="">
+        <nav class="sub-main-input">
             <p class="p-title"> Pronto para assistir? Informe seu email para criar ou reiniciar sua assinatura.</p>
             <form class="form" method="GET">
                 <input type="text" placeholder="Buscar filme" name="movie" class="form__input" >
-                <input type="submit" class="form__submit" value="Vamos lá">
+                <input type="submit" class="form__submit" value="Vamos lá" >
             </form>
         </nav>
         </section>
         
 
-      <footer>
+        <footer>
             <div class="footer-painel">
                     <div class="footer-links-c1">
                         <a href="#">Dúvidas? Ligue 0800-761-4631</a>
@@ -221,7 +240,7 @@
 
     #flb {
         width: 100%;
-        height: 474vh;
+        height: 480vh;
         background: #222;
     }
 
@@ -239,9 +258,9 @@
     }
 
     header .logo {
-        width: 15rem;
-        height: 8rem;
-        margin: 0.2rem 0 0 3rem;
+        width: 10.5rem;
+        height: 7rem;
+        margin: -0.29rem 0 0 3.5rem;
         position: absolute;
         z-index: 5;
     }
@@ -313,7 +332,7 @@
     }
 
     .form__submit:hover {
-            background-color:#c70913;
+        background-color:#c70913;
     }
 
 
@@ -360,6 +379,13 @@
         top: -5%;
     }
 
+    .icon-container-left .fa {
+        font-size: 25rem;
+        position: relative;
+        left: 8%;
+        top: -5%;
+    }
+
     .icon-content {
         background: #e509ae;
         width: 5rem;
@@ -372,6 +398,7 @@
         background: #000;
         margin: 0.5rem 0; 
         color: #fff;
+        cursor: pointer;
     }
 
     .container-title {
@@ -391,6 +418,20 @@
         justify-content: space-between;
         margin: 0.5rem 0;
     }
+
+
+    .mini-container-left {
+        background: #303030;
+        width: 48rem;
+        height: 4.2rem;
+        position: relative;
+        left: 28rem;
+        display: flex;
+        justify-content: center;
+        justify-content: space-between;
+        margin: 0.5rem 0;
+    }
+
 
     .mini-container p {
         padding: 1.4rem 0 0 1.2rem;
@@ -420,10 +461,21 @@
         display: block;
     }
 
+    .sub-main-input {
+        padding: 2.5rem 0 0 30rem;
+    }
+
+    .sub-main-input .p-title{
+        padding: 0 0 0 2.1rem;
+        padding-bottom: 0.5rem;
+        color: #fff;
+        font-weight: bolder;
+        font-size: 1.2rem;
+    }
 
     footer {
         width: 100%;
-        height: 15rem;
+        height: 17.8rem;
         background: #000;
         margin-top: 0.5rem; 
         color: #fff;
@@ -444,7 +496,7 @@
 
 
     .footer-painel{
-        padding: 2.5rem;
+        padding: 1.5rem;
         display: flex;
         justify-content: space-evenly;
     }
