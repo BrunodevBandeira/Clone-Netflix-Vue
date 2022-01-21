@@ -1,8 +1,12 @@
 <template>
     <div id="flb">
+
+
+        <router-view></router-view>
         <header>
             <img class="logo" src="../sprite/netflix-logo.svg" alt="Logo da Netflix">
-            <button class="header-btn"> Entrar </button>
+            <!-- <button class="header-btn"> Entrar </button> -->
+            <router-link to="/FlixLogin" class="header-btn"> Entrar </router-link>
         </header>
 
         <img class="telaDeFundo" src="../assets/Netflix.jpg" alt="Tela de fundo">
@@ -255,6 +259,7 @@
         left: 90%;
         margin: 2rem 0 0 1rem;
         border: none;
+        cursor: pointer;
     }
 
     header .logo {

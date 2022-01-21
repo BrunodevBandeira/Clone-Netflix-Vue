@@ -19,7 +19,7 @@
 
                 <p class="sub-title2"><a href="#"> Precisa de Ajuda ? </a></p>
 
-                <p class="sub-title3"><i class="fa fa-facebook-square"></i><a href="#"> Conectar com Facebook </a></p>
+                <p class="sub-title3"><i class="fa fa-facebook-square"></i><a href="https://www.facebook.com/" target="_blank"> Conectar com Facebook </a></p>
 
                 <p class="sub-title4"> Novo por aqui ?<span> <a href="#"> Assine agora. </a></span></p>
                 
