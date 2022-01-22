@@ -152,7 +152,7 @@
         </section>
         
 
-        <footer>
+        <!-- <footer>
             <div class="footer-painel">
                     <div class="footer-links-c1">
                         <a href="#">Dúvidas? Ligue 0800-761-4631</a>
@@ -182,7 +182,7 @@
                     </div>
 
             </div>
-        </footer>
+        </footer> -->
     </div>
 </template>
 
@@ -478,7 +478,7 @@
         font-size: 1.2rem;
     }
 
-    footer {
+    /* footer {
         width: 100%;
         height: 17.8rem;
         background: #000;
@@ -487,13 +487,7 @@
     }
 
 
-    /* footer {
-        width: 100%;
-        height: 19.8rem;
-        background-color: rgba(0,0,0,.75);
-        position: absolute;
-        bottom: -29rem;
-    } */
+
 
     footer div a{
         color: #8c8c8c;
@@ -546,7 +540,7 @@
         display: flex;
         flex-direction: row;
     }
-
+ */
 
 
 </style>
